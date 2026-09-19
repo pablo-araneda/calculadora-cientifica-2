@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora cientifica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="calc" aria-label="Calculadora científica">
+
+    <!-- Pantalla -->
+    <section class="screen" aria-live="polite">
+      <div class="flags">
+        <span id="flag-inv" class="flag">INV</span>
+        <span id="flag-mode" class="flag flag-on">DEG</span>
+      </div>
+      <div class="expr" id="expr"></div>
+      <div class="result" id="result">0</div>
+    </section>
+
+    <!-- Teclado -->
+    <div class="keys">
+
+      <!-- Fila 1: controles -->
+      <button class="key k-ctl" data-action="inv" aria-pressed="false">INV</button>
+      <button class="key k-ctl" data-action="mode" id="btn-mode">DEG</button>
+      <button class="key k-fn" data-v="π">π</button>
+      <button class="key k-fn" data-v="e">e</button>
+      <button class="key k-clear" data-action="ac">AC</button>
+
+      <!-- Fila 2: funciones -->
+      <button class="key k-fn" data-v="sin(" data-inv-v="asin(" data-label="sin" data-inv-label="sin⁻¹">sin</button>
+      <button class="key k-fn" data-v="cos(" data-inv-v="acos(" data-label="cos" data-inv-label="cos⁻¹">cos</button>
+      <button class="key k-fn" data-v="tan(" data-inv-v="atan(" data-label="tan" data-inv-label="tan⁻¹">tan</button>
+      <button class="key k-fn" data-v="ln(" data-inv-v="e^(" data-label="ln" data-inv-label="eˣ">ln</button>
+      <button class="key k-fn" data-v="log(" data-inv-v="10^(" data-label="log" data-inv-label="10ˣ">log</button>
+
+      <!-- Fila 3: potencias y paréntesis -->
+      <button class="key k-fn" data-v="^2">x²</button>
+      <button class="key k-fn" data-v="√(">√</button>
+      <button class="key k-fn" data-v="^">xʸ</button>
+      <button class="key k-fn" data-v="(">(</button>
+      <button class="key k-fn" data-v=")">)</button>
+
+      <!-- Fila 4 -->
+      <button class="key k-num" data-v="7">7</button>
+      <button class="key k-num" data-v="8">8</button>
+      <button class="key k-num" data-v="9">9</button>
+      <button class="key k-op" data-v="÷">÷</button>
+      <button class="key k-clear" data-action="del" aria-label="Borrar">DEL</button>
+
+      <!-- Fila 5 -->
+      <button class="key k-num" data-v="4">4</button>
+      <button class="key k-num" data-v="5">5</button>
+      <button class="key k-num" data-v="6">6</button>
+      <button class="key k-op" data-v="×">×</button>
+      <button class="key k-fn" data-v="!">n!</button>
+
+      <!-- Fila 6 -->
+      <button class="key k-num" data-v="1">1</button>
+      <button class="key k-num" data-v="2">2</button>
+      <button class="key k-num" data-v="3">3</button>
+      <button class="key k-op" data-v="−">−</button>
+      <button class="key k-fn" data-v="^(-1)">1/x</button>
+
+      <!-- Fila 7 -->
+      <button class="key k-num" data-v="0">0</button>
+      <button class="key k-num" data-v=".">.</button>
+      <button class="key k-fn" data-v="%">%</button>
+      <button class="key k-op" data-v="+">+</button>
+      <button class="key k-eq" data-action="eq">=</button>
+
+    </div>
+  </main>
+
+  <script src="css/app.js"></script>
+</body>
+</html>
